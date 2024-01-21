@@ -19,7 +19,7 @@ spec:
     
       containers: 
        - name: go
-         image: leonardosartorello/go_ci:23 
+         image: chlspvh/go_cib5:Aula_5
          ports:
           - containerPort: 8000
          env:
@@ -55,7 +55,7 @@ spec:
                 key: PORT
          livenessProbe:
            httpGet:
-             path: /bruno
+             path: /healthcheck
              port: 8000
            initialDelaySeconds: 60
            periodSeconds: 5
